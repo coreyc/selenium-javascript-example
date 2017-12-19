@@ -12,11 +12,11 @@
 
   "selenium" : {
     "start_process" : true,
-    "server_path" : "./bin/selenium-server-standalone-2.53.1.jar",
+    "server_path" : "bin/selenium-server-standalone-2.53.1.jar",
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "./bin/chromedriver.exe",
+      "webdriver.chrome.driver" : "bin/chromedriver.exe",
       "webdriver.ie.driver" : "",
       "webdriver.firefox.profile" : ""
     }
