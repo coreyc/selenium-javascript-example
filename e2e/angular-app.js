@@ -1,5 +1,5 @@
 module.exports = {
-  'Homepage test' : (client) => {
+  'Angular app test' : (client) => {
     client
       .url('http://localhost:4200')
       .waitForElementVisible('body', 1000)
