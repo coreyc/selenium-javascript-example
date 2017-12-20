@@ -1,5 +1,5 @@
 {
-  "src_folders" : ["e2e"],
+  "src_folders" : ["e2e/tests"],
   "output_folder" : "e2e/reports",
   "custom_commands_path" : "",
   "page_objects_path" : "e2e/pages",

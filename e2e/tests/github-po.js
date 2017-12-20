@@ -1,5 +1,5 @@
 module.exports = {
-  'Github test' : (client) => {
+  'Github test' : function (client) {
     const github = client.page.github();
     github
       .navigate()
@@ -8,8 +8,8 @@ module.exports = {
       .assert.attributeEquals('@searchBar', 'placeholder', 'Search GitHub')
       .setValue('@searchBar', 'selenium-javascript-example')
       .submitForm('@form')
-      .pause(1000)
-      .assert.title('Search · selenium-javascript-example · GitHub')
-      .end();
+      .assert.title('Search · selenium-javascript-example · GitHub');
+
+    client.end();
   }
 };
