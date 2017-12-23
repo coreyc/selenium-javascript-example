@@ -18,7 +18,10 @@ module.exports = {
     github
       .navigate()
       .waitForElementVisible('body', 1000)
-      .waitForElementVisible('@pinnedRepos', 1000);
+      .assert.cssProperty('a', 'color', 'rgba(3, 102, 214, 1)')
+      .waitForElementVisible('@pinnedRepos', 1000)
+      .click('@repositories')
+      .assert.urlContains('repositories');
 
     client.end();
   }
