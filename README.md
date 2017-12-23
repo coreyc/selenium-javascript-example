@@ -5,5 +5,3 @@ This repo demonstrates using Selenium Webdriver and Nightwatch.js to write JavaS
 ## Running end-to-end tests
 
 Run `npm run e2e` to execute the end-to-end tests.
-
-
