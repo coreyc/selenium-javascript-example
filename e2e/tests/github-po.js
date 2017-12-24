@@ -30,21 +30,15 @@ module.exports = {
     nav.expect.element('@following').to.be.visible
 
     nav
-      .click('@repositories')
+      .clickAndCapture('@overview', 'overview.png', client)
+      .clickAndCapture('@repositories', 'repos.png', client)
       .assert.urlContains('repositories')
-    nav
-      .click('@stars')
+      .clickAndCapture('@stars', 'stars.png', client)
       .assert.urlContains('stars')
-    nav
-      .click('@followers')
+      .clickAndCapture('@followers', 'followers.png', client)
       .assert.urlContains('followers')
-      .waitForElementVisible('@followers', 500)
-      .saveScreenshot('e2e/screenshots/followers.png', client)
-    nav
-      .click('@following')
+      .clickAndCapture('@following', 'following.png', client)
       .assert.urlContains('following')
-      .pause(1000, client)
-      .saveScreenshot('e2e/screenshots/test.png', client)
 
     client.saveScreenshot('e2e/screenshots/end.png')
     client.end()

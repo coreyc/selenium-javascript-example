@@ -6,12 +6,17 @@ const cmds = {
   saveScreenshot: function (path, client) {
     client.saveScreenshot(path)
     return this
+  },
+  clickAndCapture: function (element, fileName, client) {
+    return this
+      .click(element)
+      .pause(500, client)
+      .saveScreenshot('e2e/screenshots/' + fileName, client)
   }
 }
 
 module.exports = {
   url: 'https://www.github.com/coreyc',
-  commands: [cmds],
   elements: {
     pinnedRepos: {
       selector: '.js-pinned-repos-reorder-container'
