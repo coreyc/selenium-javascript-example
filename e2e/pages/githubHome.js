@@ -8,4 +8,4 @@ module.exports = {
       selector: 'form.js-site-search-form'
     }
   }
-};
+}

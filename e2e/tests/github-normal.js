@@ -9,6 +9,6 @@ module.exports = {
       .submitForm('form.js-site-search-form')
       .pause(1000)
       .assert.title('Search · selenium-javascript-example · GitHub')
-      .end();
+      .end()
   }
-};
+}

@@ -6,6 +6,6 @@ module.exports = {
       .assert.title('SeleniumJavascriptExample')
       .waitForElementVisible('a:first-child', 1000)
       .click('a:first-child')
-      .end();
+      .end()
   }
-};
+}
