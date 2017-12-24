@@ -15,6 +15,7 @@ module.exports = {
   },
   sections: {
     userProfileNav: {
+      commands: [cmds],
       selector: '.user-profile-nav.js-sticky',
       elements: {
         overview: {

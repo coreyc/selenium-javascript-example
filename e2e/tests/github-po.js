@@ -22,19 +22,32 @@ module.exports = {
       .assert.cssProperty('a', 'color', 'rgba(3, 102, 214, 1)')
       .waitForElementVisible('@pinnedRepos', 1000);
 
+    client.saveScreenshot('e2e/screenshots/userProfileNav.png');
     nav.expect.element('@overview').to.be.visible;
     nav.expect.element('@repositories').to.be.visible;
     nav.expect.element('@stars').to.be.visible;
     nav.expect.element('@followers').to.be.visible;
     nav.expect.element('@following').to.be.visible;
+
     nav
       .click('@repositories')
       .assert.urlContains('repositories');
-
-    github.
-      saveScreenshot('e2e/screenshots/repositories.png', client)
-      
-
+    client.pause(1000);
+    nav
+      .click('@stars')
+      .assert.urlContains('stars');
+    client.pause(1000);
+    nav
+      .click('@followers')
+      .assert.urlContains('followers');
+    client.pause(1000);
+    nav
+      .click('@following')
+      .assert.urlContains('following')
+      .saveScreenshot('e2e/screenshots/test.png', client);
+    client.pause(1000);
+    client.saveScreenshot('e2e/screenshots/end.png')
+    client.pause(1000);
     client.end();
   }
 };
