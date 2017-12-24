@@ -1,5 +1,9 @@
 const cmds = {
-  saveScreenshot: (path, client) => {
+  pause: function (time, client) {
+    client.pause(time);
+    return this;
+  },
+  saveScreenshot: function (path, client) {
     client.saveScreenshot(path);
     return this;
   }

@@ -32,22 +32,21 @@ module.exports = {
     nav
       .click('@repositories')
       .assert.urlContains('repositories');
-    client.pause(1000);
     nav
       .click('@stars')
       .assert.urlContains('stars');
-    client.pause(1000);
     nav
       .click('@followers')
-      .assert.urlContains('followers');
-    client.pause(1000);
+      .assert.urlContains('followers')
+      .waitForElementVisible('@followers', 500)
+      .saveScreenshot('e2e/screenshots/followers.png', client);
     nav
       .click('@following')
       .assert.urlContains('following')
+      .pause(1000, client)
       .saveScreenshot('e2e/screenshots/test.png', client);
-    client.pause(1000);
+
     client.saveScreenshot('e2e/screenshots/end.png')
-    client.pause(1000);
     client.end();
   }
 };
